@@ -1,0 +1,90 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Roboto:wght@700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #ff9966, #ff5e62); /* Motivational orange-red gradient */
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+    direction: rtl;
+    text-align: center;
+}
+
+/* Motivational Container */
+.motivation-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+    position: relative;
+    border: 2px solid #ff6b00;
+    animation: slideIn 1s ease-out, fadeIn 1.5s ease-out;
+}
+
+/* Header Style */
+.motivation-container h1 {
+    font-size: 28px;
+    color: #d63384;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #ff6b00;
+    animation: slideInTitle 1s ease-out;
+}
+
+/* Quote Text */
+.motivation-container p {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.8;
+    padding: 10px;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Author Style */
+.motivation-container small {
+    font-size: 16px;
+    color: #666;
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .motivation-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .motivation-container h1 {
+        font-size: 24px;
+    }
+
+    .motivation-container p {
+        font-size: 18px;
+    }
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInTitle {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
