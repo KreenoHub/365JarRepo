@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רגע שלנו מפעם</title>
+    <link rel="stylesheet" href="memoriesstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
+</head>
+<body style="background-image: url('MemoriesPhotos/10.jpg'); display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+
+    <div class="memory-container" onclick="revealMemory()">
+        <div class="memory-overlay">
+            <h1 class="memory-title">✨ רגע שלנו מפעם ✨</h1>
+        </div>
+        <p class="memory-text rubik-scribble-regular">הטיולים הרנדומליים שלנו בים</p>
+    </div>
+
+    <script>
+        function revealMemory() {
+            document.querySelector('.memory-container').classList.add('revealed');
+        }
+    </script>
+
+</body>
+</html>
