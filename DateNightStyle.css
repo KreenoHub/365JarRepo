@@ -1,0 +1,96 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Varela+Round&display=swap');
+
+body {
+    background: linear-gradient(135deg, #000428, #004e92); /* Deep blue night theme */
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+    direction: rtl;
+    text-align: center;
+}
+
+/* Date Night Container */
+.date-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+    position: relative;
+    border: 2px solid #ff4e50;
+    animation: fadeIn 1.5s ease-out, popUp 0.6s ease-out;
+}
+
+/* Decorative Hearts */
+.date-container::before, .date-container::after {
+    content: "💑";
+    font-size: 30px;
+    position: absolute;
+}
+
+.date-container::before {
+    top: -10px;
+    left: -10px;
+}
+
+.date-container::after {
+    bottom: -10px;
+    right: -10px;
+}
+
+/* Header Style */
+.date-container h1 {
+    font-size: 28px;
+    color: #ff4e50;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #ff4e50;
+    animation: glowing 1.5s infinite;
+}
+
+/* Date Idea Text */
+.date-container p {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.8;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .date-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .date-container h1 {
+        font-size: 24px;
+    }
+
+    .date-container p {
+        font-size: 18px;
+    }
+}
+
+/* Animations */
+@keyframes glowing {
+    0%, 100% { text-shadow: 0px 0px 5px rgba(255, 78, 80, 0.8); }
+    50% { text-shadow: 0px 0px 15px rgba(255, 78, 80, 1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popUp {
+    0% { transform: scale(0.9); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
